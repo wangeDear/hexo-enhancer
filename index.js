@@ -36,7 +36,7 @@ function filterPost(log, data) {
         data.categories.forEach(item => {
             if (typeof item === 'string') {
                 categories.push(item);
-            } else if (item.name) {
+            } else if (item.name && categories.indexOf(item.name)<0) {
                 categories.push(item.name);
             }
         });
